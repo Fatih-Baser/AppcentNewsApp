@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">AppcentNewsApp</string>
+    <string name="app_name">AppCentNews</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="news_photo">News Photo</string>
+    <string name="description">Description</string>
+    <string name="content">Content</string>
+    <string name="more_read">More Read</string>
+    <string name="publish">Publish</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="news_title">News Title</string>
 </resources>
