@@ -22,6 +22,11 @@
         android:name="com.fatihbaserpl.appcentnewsapp.fragments.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="newsArgs"
+            android:defaultValue="@null"
+            app:argType="com.fatihbaserpl.appcentnewsapp.domain.Article"
+            app:nullable="true" />
         <action
             android:id="@+id/action_detailFragment_to_webViewFragment"
             app:destination="@id/webViewFragment" />

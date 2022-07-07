@@ -12,6 +12,9 @@
         <entry key="app/src/main/res/layout/fragment_news.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/fragment_web_view.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/list_item_search.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/list_item_shimmer.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.25729166666666664" />
       </map>
     </option>
