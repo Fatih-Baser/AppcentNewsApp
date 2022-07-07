@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/newsFragment"
-        android:name="com.fatihbaserpl.appcentnewsapp.NewsFragment"
+        android:name="com.fatihbaserpl.appcentnewsapp.fragments.NewsFragment"
         android:label="fragment_news"
         tools:layout="@layout/fragment_news" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.fatihbaserpl.appcentnewsapp.DetailFragment"
+        android:name="com.fatihbaserpl.appcentnewsapp.fragments.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.fatihbaserpl.appcentnewsapp.SearchFragment"
+        android:name="com.fatihbaserpl.appcentnewsapp.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/webViewFragment"
-        android:name="com.fatihbaserpl.appcentnewsapp.WebViewFragment"
+        android:name="com.fatihbaserpl.appcentnewsapp.fragments.WebViewFragment"
         android:label="fragment_web_view"
         tools:layout="@layout/fragment_web_view" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
-        android:name="com.fatihbaserpl.appcentnewsapp.FavoriteFragment"
+        android:name="com.fatihbaserpl.appcentnewsapp.fragments.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" />
 </navigation>
