@@ -1,60 +1,111 @@
 package com.fatihbaserpl.appcentnewsapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
+import android.util.Log
+
 import android.view.View
-import android.view.ViewGroup
+
+import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.widget.SearchView
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.fatihbaserpl.appcentnewsapp.R
+import com.fatihbaserpl.appcentnewsapp.databinding.FragmentSearchBinding
+import com.fatihbaserpl.appcentnewsapp.util.Resource
+import dagger.hilt.android.AndroidEntryPoint
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+@AndroidEntryPoint
+class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding::inflate) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SearchFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class SearchFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var searchAdapter = SearchAdapter()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    private val viewModel: SearchViewModel by viewModels()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpRv()
+        searching()
+        observeSearchData()
+        backStack()
+
+        searchAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putParcelable("newsArgs", it)
+            }
+            findNavController().navigate(
+                R.id.action_searchFragment_to_detailFragment,
+                bundle
+            )
+        }
+
+    }
+
+    private fun searching() {
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            android.widget.SearchView.OnQueryTextListener {
+
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                viewModel.searchNews(query!!)
+                showProgressBar()
+                binding.searchRv.visibility = View.VISIBLE
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+        })
+    }
+
+    private fun setUpRv() {
+        binding.searchRv.apply {
+            adapter = searchAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+            setHasFixedSize(true)
+            hideProgressBar()
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SearchFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SearchFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    private fun observeSearchData() {
+        viewModel.newsResponse.observe(viewLifecycleOwner, { result ->
+            when (result) {
+                is Resource.Success -> {
+                    hideProgressBar()
+                    result.data?.articles.also {
+                        if (it != null) {
+                            searchAdapter.news = it
+                        }
+                    }
+                }
+                is Resource.Error -> {
+                    hideProgressBar()
+                    result.message?.let { message ->
+                        Log.e("TAG", "An error occured: $message")
+                    }
+                }
+                is Resource.Loading -> {
+                    showProgressBar()
                 }
             }
+        })
+    }
+
+    private fun backStack() {
+        val callBack = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(callBack)
+    }
+
+    private fun hideProgressBar() {
+        binding.progress.visibility = View.INVISIBLE
+    }
+
+    private fun showProgressBar() {
+        binding.progress.visibility = View.VISIBLE
     }
 }

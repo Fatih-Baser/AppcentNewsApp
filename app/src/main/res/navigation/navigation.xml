@@ -15,7 +15,11 @@
             app:destination="@id/searchFragment" />
         <action
             android:id="@+id/action_newsFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -29,7 +33,13 @@
             app:nullable="true" />
         <action
             android:id="@+id/action_detailFragment_to_webViewFragment"
-            app:destination="@id/webViewFragment" />
+            app:destination="@id/webViewFragment"
+            app:popUpTo="@+id/detailFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_detailFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
@@ -51,9 +61,17 @@
         android:name="com.fatihbaserpl.appcentnewsapp.fragments.WebViewFragment"
         android:label="fragment_web_view"
         tools:layout="@layout/fragment_web_view" >
+        <argument
+            android:name="webArgs"
+            app:argType="com.fatihbaserpl.appcentnewsapp.domain.Article" />
         <action
             android:id="@+id/action_webViewFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
