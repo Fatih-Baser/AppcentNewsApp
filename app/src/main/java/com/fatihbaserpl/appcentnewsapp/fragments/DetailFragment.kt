@@ -7,12 +7,15 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import coil.load
 import coil.transform.RoundedCornersTransformation
 import com.fatihbaserpl.appcentnewsapp.R
 import com.fatihbaserpl.appcentnewsapp.databinding.FragmentDetailBinding
+import com.fatihbaserpl.appcentnewsapp.domain.Article
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,10 +23,28 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding
 
     private val args: DetailFragmentArgs by navArgs()
 
+ //   private val viewModel:FavoriteViewModel by viewModels()
+
+    private val viewModel: FavoriteViewModel by lazy {
+        ViewModelProvider(this)[FavoriteViewModel::class.java]
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         backStack()
         bindIncomingData()
+
+
+
+        val article = args.newsArgs
+        binding.fab.setOnClickListener {
+            if (article != null) {
+                viewModel.AddFavorite(article)
+            }
+        }
     }
+
+
+
 
     private fun bindIncomingData() {
 
