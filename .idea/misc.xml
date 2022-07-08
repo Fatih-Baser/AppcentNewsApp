@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/round_corner.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/searchview_background.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/favoritelistitem.xml" value="0.11851851851851852" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/fragment_news.xml" value="0.18614130434782608" />
