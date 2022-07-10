@@ -51,10 +51,16 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding
         val article = args.newsArgs
 
         if (article != null) {
+            binding.txtTitle.text = article.title
+        }
+        if (article != null) {
             binding.txtDescription.text = article.description
         }
         if (article != null) {
             binding.txtContent.text = article.content
+        }
+        if (article != null) {
+            binding.txtAutor.text = article.author
         }
         if (article != null) {
             binding.txtPublish.text = article.publishedAt

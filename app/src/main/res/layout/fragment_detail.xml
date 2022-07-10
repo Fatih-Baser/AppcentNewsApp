@@ -26,6 +26,64 @@
                 android:scaleType="centerCrop" />
 
             <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="10"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_person"
+                    android:layout_weight="0.2"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+
+                    />
+                <TextView
+                    android:id="@+id/txt_autor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/author"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_calender"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txt_publish"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_weight="1.8"
+                    android:text="@string/publish"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <TextView
                 android:id="@+id/txt_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,7 +93,10 @@
                 android:padding="8dp"
                 android:text="@string/description"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
+
+
+
 
             <TextView
                 android:id="@+id/txt_content"
@@ -47,16 +108,9 @@
                 android:padding="8dp"
                 android:text="@string/content"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/txt_publish"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="@string/publish"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
+
 
             <Button
                 android:id="@+id/btn_read"
@@ -66,7 +120,7 @@
                 android:layout_marginTop="16dp"
                 android:backgroundTint="@color/general_color"
                 android:insetRight="10dp"
-                android:text="@string/more_read"
+                android:text="@string/news_sources"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 app:cornerRadius="10dp"
