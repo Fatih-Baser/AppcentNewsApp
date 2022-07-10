@@ -21,7 +21,16 @@ class SearchViewModel @Inject constructor(private val repository: NewsRepository
     val newsResponse: LiveData<Resource<NewsResponse>>
         get() = _response
 
+    init {
+        getBreakingNews()
+    }
 
+    private fun getBreakingNews() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val result = repository.getNews(country = "tr", category = "business")
+            _response.postValue(result)
+        }
+    }
 
      fun searchNews(searchQuery: String) {
         viewModelScope.launch(Dispatchers.IO) {
