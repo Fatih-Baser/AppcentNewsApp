@@ -1,24 +1,14 @@
 package com.fatihbaserpl.appcentnewsapp.fragments
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.fatihbaserpl.appcentnewsapp.NewsAdapter
-import com.fatihbaserpl.appcentnewsapp.R
 import com.fatihbaserpl.appcentnewsapp.databinding.FragmentFavoriteBinding
-import com.fatihbaserpl.appcentnewsapp.databinding.FragmentNewsBinding
-import com.fatihbaserpl.appcentnewsapp.favoriteroom.ArticleDatabase
-import com.fatihbaserpl.appcentnewsapp.util.Resource
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 

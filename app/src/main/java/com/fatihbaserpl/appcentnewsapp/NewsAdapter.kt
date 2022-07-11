@@ -11,6 +11,7 @@ import coil.transform.RoundedCornersTransformation
 import com.fatihbaserpl.appcentnewsapp.databinding.ListItemBinding
 import com.fatihbaserpl.appcentnewsapp.domain.Article
 import com.fatihbaserpl.appcentnewsapp.fragments.NewsFragmentDirections
+import kotlinx.coroutines.delay
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
 
@@ -64,6 +65,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
         holder.bind(newsList)
 
         holder.binding.root.setOnClickListener { view ->
+
             val action = NewsFragmentDirections.actionNewsFragmentToDetailFragment(newsList)
             findNavController(view).navigate(action)
         }

@@ -4,9 +4,11 @@ buildscript {
     ext.hilt_version = '2.40'
     ext.retrofit_version = '2.9.0'
     ext.nav_version = '2.4.0-rc01'
+
     repositories {
         google()
         mavenCentral()
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.4"
@@ -18,6 +20,7 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

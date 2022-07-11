@@ -8,6 +8,8 @@ import javax.inject.Inject
 class NewsFavoriteRepository @Inject constructor(private val articleDao: ArticleDao) {
 
 
+
+
     suspend fun addFavorite(article: Article){
         articleDao.upsert(article)
     }

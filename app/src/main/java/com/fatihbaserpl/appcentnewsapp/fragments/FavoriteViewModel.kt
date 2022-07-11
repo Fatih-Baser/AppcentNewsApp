@@ -20,7 +20,7 @@ class FavoriteViewModel @Inject constructor(
     val newsRepository : NewsFavoriteRepository
 ) : ViewModel(){
 
-    private val _response = MutableLiveData<List<Article>>()
+
 
     fun AddFavorite(article: Article) = viewModelScope.launch {
         newsRepository.addFavorite(article)
