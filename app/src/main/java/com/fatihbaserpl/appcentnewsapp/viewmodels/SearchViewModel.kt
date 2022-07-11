@@ -17,7 +17,7 @@ import javax.inject.Inject
 class SearchViewModel @Inject constructor(private val repository: NewsRepository) :
     ViewModel() {
 
-     private val _response = MutableLiveData<Resource<NewsResponse>>()
+    private val _response = MutableLiveData<Resource<NewsResponse>>()
     val newsResponse: LiveData<Resource<NewsResponse>>
         get() = _response
 
@@ -32,7 +32,7 @@ class SearchViewModel @Inject constructor(private val repository: NewsRepository
         }
     }
 
-     fun searchNews(searchQuery: String) {
+    fun searchNews(searchQuery: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val result = repository.searchNews(searchQuery)
             _response.postValue(result)

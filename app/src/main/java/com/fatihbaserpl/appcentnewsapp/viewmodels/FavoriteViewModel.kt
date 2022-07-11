@@ -11,25 +11,20 @@ import javax.inject.Inject
 @HiltViewModel
 class FavoriteViewModel @Inject constructor(
 
-    val newsRepository : NewsFavoriteRepository
-) : ViewModel(){
-
+    val newsRepository: NewsFavoriteRepository
+) : ViewModel() {
 
 
     fun AddFavorite(article: Article) = viewModelScope.launch {
         newsRepository.addFavorite(article)
     }
+
     fun getSavedNews() = newsRepository.getAll()
-
-
 
 
     fun deleteFavorite(article: Article) = viewModelScope.launch {
         newsRepository.deleteFavorite(article)
     }
-
-
-
 
 
 }

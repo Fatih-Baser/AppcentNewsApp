@@ -1,15 +1,11 @@
 package com.fatihbaserpl.appcentnewsapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.fatihbaserpl.appcentnewsapp.R
 import com.fatihbaserpl.appcentnewsapp.databinding.FragmentWebViewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
