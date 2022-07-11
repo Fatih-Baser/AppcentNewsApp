@@ -28,7 +28,7 @@ This app uses [***MVVM (Model View View-Model)***](https://developer.android.com
 <img alt="NewsApp Main Page" height="450px" src="https://user-images.githubusercontent.com/59232580/178263276-3ef2236f-6577-4e7b-a731-e3f10bd02c39.jpeg"   />
 
 https://user-images.githubusercontent.com/59232580/178268820-43772f50-9532-4d30-825a-ab0ef4292230.mp4
-/>
+
 </p>
 
 
