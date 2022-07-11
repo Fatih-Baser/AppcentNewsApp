@@ -44,7 +44,7 @@ class FavoriteFragment : BaseFragment<FragmentFavoriteBinding>(FragmentFavoriteB
                 if (articles != null) {
                     viewModel.deleteFavorite(articles)
                 }
-                view?.let {
+                view.let {
                     Snackbar.make(it,"Successfully deleted article", Snackbar.LENGTH_LONG).apply {
                         setAction("Undo"){
                             if (articles != null) {

@@ -1,17 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp">
 
-    <androidx.core.widget.NestedScrollView
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:id="@+id/back_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+
+            android:padding="4dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_back"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_autr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/share_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:padding="4dp"
+            android:src="@drawable/ic_share"
+
+            />
+
+        <ImageView
+            android:id="@+id/favorite_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:padding="4dp"
+            android:src="@drawable/favorite"
+
+            />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -33,43 +94,46 @@
                 android:ellipsize="end"
                 android:maxLines="10"
                 android:padding="8dp"
-                android:textStyle="bold"
                 android:text="@string/title"
                 android:textColor="@color/black"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageView
 
                     android:layout_width="0dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_person"
-                    android:layout_weight="0.2"
-                    android:layout_marginStart="20dp"
                     android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_person"
 
                     />
+
                 <TextView
                     android:id="@+id/txt_autor"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:padding="8dp"
                     android:text="@string/author"
-                    android:layout_weight="1"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
+
                 <ImageView
 
                     android:layout_width="0dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_calender"
-                    android:layout_weight="0.2"
                     android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_calender"
 
                     />
 
@@ -77,12 +141,13 @@
                     android:id="@+id/txt_publish"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
                     android:layout_weight="1.8"
+                    android:padding="8dp"
                     android:text="@string/publish"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/txt_description"
                 android:layout_width="match_parent"
@@ -94,8 +159,6 @@
                 android:text="@string/description"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
-
-
 
 
             <TextView
@@ -110,8 +173,6 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-
-
             <Button
                 android:id="@+id/btn_read"
                 android:layout_width="wrap_content"
@@ -125,19 +186,7 @@
                 android:textColor="#FFFFFF"
                 app:cornerRadius="10dp"
                 app:iconTintMode="add" />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
 
-                app:fabSize="normal"
-                android:clickable="true"
-                android:focusable="true"
-                android:tint="@color/white"
-                android:layout_marginBottom="32dp"
-                android:layout_marginEnd="32dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>

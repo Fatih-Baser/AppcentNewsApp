@@ -22,6 +22,13 @@ class WebViewFragment : BaseFragment<FragmentWebViewBinding>(FragmentWebViewBind
         super.onViewCreated(view, savedInstanceState)
         webViewSetup()
         backStackWeb()
+
+        binding.backButton.setOnClickListener(View.OnClickListener {
+
+            this.findNavController().popBackStack()
+        })
+
+
     }
 
     private fun backStackWeb() {
