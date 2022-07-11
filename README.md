@@ -2,7 +2,7 @@
 
 NewsApp is a sample news app built using Modern Android Development (Architecture Components, MVVM, Kotlin, Coroutines, Retrofit, Navigation, Dagger-Hilt and Clean Architecture).
 
-NewsApp is simple App which uses [NewsAPI](https://newsapi.org/) to get top headlines for country you live in or you can search for a specific news.
+News App is a simple app that uses NewsAPI to get the best headlines from the country you live in, or you can search for a specific news and add news you like.
 
 ## Architecture
 
