@@ -8,7 +8,9 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.fatihbaserpl.appcentnewsapp.adapters.FavoriteNewsAdapter
 import com.fatihbaserpl.appcentnewsapp.databinding.FragmentFavoriteBinding
+import com.fatihbaserpl.appcentnewsapp.viewmodels.FavoriteViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 

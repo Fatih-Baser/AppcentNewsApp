@@ -1,16 +1,10 @@
-package com.fatihbaserpl.appcentnewsapp.fragments
+package com.fatihbaserpl.appcentnewsapp.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fatihbaserpl.appcentnewsapp.domain.Article
-import com.fatihbaserpl.appcentnewsapp.domain.NewsFavoriteRepository
-import com.fatihbaserpl.appcentnewsapp.domain.NewsResponse
-import com.fatihbaserpl.appcentnewsapp.util.Resource
+import com.fatihbaserpl.appcentnewsapp.repository.NewsFavoriteRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

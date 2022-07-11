@@ -1,19 +1,14 @@
 package com.fatihbaserpl.appcentnewsapp.room
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.room.Room
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertThat
 import com.fatihbaserpl.appcentnewsapp.domain.Article
-import com.fatihbaserpl.appcentnewsapp.favoriteroom.ArticleDao
-import com.fatihbaserpl.appcentnewsapp.favoriteroom.ArticleDatabase
 import com.fatihbaserpl.appcentnewsapp.getOrAwaitValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before

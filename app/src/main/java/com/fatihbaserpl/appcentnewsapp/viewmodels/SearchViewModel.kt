@@ -1,10 +1,10 @@
-package com.fatihbaserpl.appcentnewsapp.fragments
+package com.fatihbaserpl.appcentnewsapp.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.fatihbaserpl.appcentnewsapp.domain.NewsRepository
+import com.fatihbaserpl.appcentnewsapp.repository.NewsRepository
 import com.fatihbaserpl.appcentnewsapp.domain.NewsResponse
 import com.fatihbaserpl.appcentnewsapp.util.Resource
 

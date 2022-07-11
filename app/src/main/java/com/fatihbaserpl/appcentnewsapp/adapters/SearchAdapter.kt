@@ -1,4 +1,4 @@
-package com.fatihbaserpl.appcentnewsapp.fragments
+package com.fatihbaserpl.appcentnewsapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

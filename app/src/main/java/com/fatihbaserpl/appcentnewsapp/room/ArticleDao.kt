@@ -1,4 +1,4 @@
-package com.fatihbaserpl.appcentnewsapp.favoriteroom
+package com.fatihbaserpl.appcentnewsapp.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

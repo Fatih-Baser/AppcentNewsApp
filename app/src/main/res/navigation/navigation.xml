@@ -5,22 +5,7 @@
     android:id="@+id/navigation"
     app:startDestination="@id/searchFragment">
 
-    <fragment
-        android:id="@+id/newsFragment"
-        android:name="com.fatihbaserpl.appcentnewsapp.fragments.NewsFragment"
-        android:label="fragment_news"
-        tools:layout="@layout/fragment_news" >
-        <action
-            android:id="@+id/action_newsFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_newsFragment_to_detailFragment"
-            app:destination="@id/detailFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-    </fragment>
+
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.fatihbaserpl.appcentnewsapp.fragments.DetailFragment"
@@ -49,9 +34,7 @@
         android:name="com.fatihbaserpl.appcentnewsapp.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
-        <action
-            android:id="@+id/action_searchFragment_to_newsFragment"
-            app:destination="@id/newsFragment" />
+
         <action
             android:id="@+id/action_searchFragment_to_detailFragment"
             app:destination="@id/detailFragment" />

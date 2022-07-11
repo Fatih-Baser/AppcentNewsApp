@@ -11,8 +11,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fatihbaserpl.appcentnewsapp.R
+import com.fatihbaserpl.appcentnewsapp.adapters.SearchAdapter
 import com.fatihbaserpl.appcentnewsapp.databinding.FragmentSearchBinding
 import com.fatihbaserpl.appcentnewsapp.util.Resource
+import com.fatihbaserpl.appcentnewsapp.viewmodels.SearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

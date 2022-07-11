@@ -1,4 +1,4 @@
-package com.fatihbaserpl.appcentnewsapp.remote
+package com.fatihbaserpl.appcentnewsapp.api
 
 import com.fatihbaserpl.appcentnewsapp.domain.NewsResponse
 import com.fatihbaserpl.appcentnewsapp.util.Constants.API_KEY

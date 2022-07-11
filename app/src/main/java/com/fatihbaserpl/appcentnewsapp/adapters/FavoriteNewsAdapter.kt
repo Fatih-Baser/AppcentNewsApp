@@ -1,21 +1,21 @@
-package com.fatihbaserpl.appcentnewsapp
+package com.fatihbaserpl.appcentnewsapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation.findNavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
-import com.fatihbaserpl.appcentnewsapp.databinding.ListItemBinding
+import com.fatihbaserpl.appcentnewsapp.R
+import com.fatihbaserpl.appcentnewsapp.databinding.FavoritelistitemBinding
 import com.fatihbaserpl.appcentnewsapp.domain.Article
-import com.fatihbaserpl.appcentnewsapp.fragments.NewsFragmentDirections
-import kotlinx.coroutines.delay
+import com.fatihbaserpl.appcentnewsapp.fragments.FavoriteFragmentDirections
 
-class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
+class FavoriteNewsAdapter : RecyclerView.Adapter<FavoriteNewsAdapter.NewsHolder>(){
 
-    inner class NewsHolder(val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class NewsHolder(val binding: FavoritelistitemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(article: Article) {
             binding.apply {
                 cardNews.startAnimation(
@@ -25,6 +25,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
                     )
                 )
                 txtTitle.text = article.title
+
                 val imageLink = article.urlToImage
                 imgNews.load(imageLink) {
                     crossfade(true)
@@ -52,7 +53,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsHolder {
         return NewsHolder(
-            ListItemBinding.inflate(
+            FavoritelistitemBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -65,9 +66,8 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
         holder.bind(newsList)
 
         holder.binding.root.setOnClickListener { view ->
-
-            val action = NewsFragmentDirections.actionNewsFragmentToDetailFragment(newsList)
-            findNavController(view).navigate(action)
+            val action = FavoriteFragmentDirections.actionFavoriteFragmentToDetailFragment(newsList)
+            Navigation.findNavController(view).navigate(action)
         }
     }
     override fun getItemCount() = news.size

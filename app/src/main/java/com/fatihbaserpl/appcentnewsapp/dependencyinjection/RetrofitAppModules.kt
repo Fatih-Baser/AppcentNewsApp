@@ -1,7 +1,7 @@
 package com.fatihbaserpl.appcentnewsapp.dependencyinjection
 
-import com.fatihbaserpl.appcentnewsapp.domain.NewsRepository
-import com.fatihbaserpl.appcentnewsapp.remote.NewsInterface
+import com.fatihbaserpl.appcentnewsapp.repository.NewsRepository
+import com.fatihbaserpl.appcentnewsapp.api.NewsInterface
 import com.fatihbaserpl.appcentnewsapp.repository.NewsRepositoryImpl
 import com.fatihbaserpl.appcentnewsapp.util.Constants.BASE_URL
 import dagger.Module
@@ -15,7 +15,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 
-object AppModules {
+object RetrofitAppModules {
 
     @Singleton
     @Provides

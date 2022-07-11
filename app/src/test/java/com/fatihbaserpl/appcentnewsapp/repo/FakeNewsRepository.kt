@@ -2,7 +2,7 @@ package com.fatihbaserpl.appcentnewsapp.repo
 
 import androidx.lifecycle.MutableLiveData
 import com.fatihbaserpl.appcentnewsapp.domain.Article
-import com.fatihbaserpl.appcentnewsapp.domain.NewsRepository
+import com.fatihbaserpl.appcentnewsapp.repository.NewsRepository
 import com.fatihbaserpl.appcentnewsapp.domain.NewsResponse
 import com.fatihbaserpl.appcentnewsapp.util.Resource
 

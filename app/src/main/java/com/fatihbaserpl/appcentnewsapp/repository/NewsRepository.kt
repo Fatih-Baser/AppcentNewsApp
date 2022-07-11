@@ -1,5 +1,6 @@
-package com.fatihbaserpl.appcentnewsapp.domain
+package com.fatihbaserpl.appcentnewsapp.repository
 
+import com.fatihbaserpl.appcentnewsapp.domain.NewsResponse
 import com.fatihbaserpl.appcentnewsapp.util.Resource
 
 

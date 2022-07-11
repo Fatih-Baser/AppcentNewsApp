@@ -2,14 +2,8 @@ package com.fatihbaserpl.appcentnewsapp.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.setViewTreeOnBackPressedDispatcherOwner
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -18,6 +12,7 @@ import coil.load
 import coil.transform.RoundedCornersTransformation
 import com.fatihbaserpl.appcentnewsapp.R
 import com.fatihbaserpl.appcentnewsapp.databinding.FragmentDetailBinding
+import com.fatihbaserpl.appcentnewsapp.viewmodels.FavoriteViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 

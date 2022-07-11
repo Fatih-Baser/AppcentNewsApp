@@ -1,8 +1,7 @@
-package com.fatihbaserpl.appcentnewsapp.domain
+package com.fatihbaserpl.appcentnewsapp.repository
 
-import androidx.room.Insert
-import com.fatihbaserpl.appcentnewsapp.favoriteroom.ArticleDao
-import com.fatihbaserpl.appcentnewsapp.remote.NewsInterface
+import com.fatihbaserpl.appcentnewsapp.domain.Article
+import com.fatihbaserpl.appcentnewsapp.room.ArticleDao
 import javax.inject.Inject
 
 class NewsFavoriteRepository @Inject constructor(private val articleDao: ArticleDao) {

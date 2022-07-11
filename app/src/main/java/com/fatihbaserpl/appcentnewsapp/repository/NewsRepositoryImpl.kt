@@ -1,9 +1,8 @@
 package com.fatihbaserpl.appcentnewsapp.repository
 
 
-import com.fatihbaserpl.appcentnewsapp.domain.NewsRepository
 import com.fatihbaserpl.appcentnewsapp.domain.NewsResponse
-import com.fatihbaserpl.appcentnewsapp.remote.NewsInterface
+import com.fatihbaserpl.appcentnewsapp.api.NewsInterface
 import com.fatihbaserpl.appcentnewsapp.util.Resource
 import javax.inject.Inject
 

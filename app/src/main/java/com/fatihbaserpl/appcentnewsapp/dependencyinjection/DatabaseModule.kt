@@ -1,8 +1,7 @@
 package com.fatihbaserpl.appcentnewsapp.dependencyinjection
 
 import android.content.Context
-import com.fatihbaserpl.appcentnewsapp.favoriteroom.ArticleDao
-import com.fatihbaserpl.appcentnewsapp.favoriteroom.ArticleDatabase
+import com.fatihbaserpl.appcentnewsapp.room.ArticleDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
