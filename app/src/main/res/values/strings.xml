@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppCentNews</string>
+    <string name="app_name">Appcent NewsApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="news_photo">News Photo</string>
     <string name="title">Title</string>
@@ -12,6 +12,7 @@
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="favorite">Favorite</string>
+    <string name="favorite_fragment">Favorites</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="news_title">News Title</string>
 </resources>
